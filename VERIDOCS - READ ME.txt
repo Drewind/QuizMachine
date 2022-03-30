@@ -1,0 +1,36 @@
+﻿Hello VeriDocs developers!
+
+
+
+It took me a little longer than I want to admit to configure and setup this project.
+Somehow did not have a valid MySQL server installation on this machine, so that took some time.
+Identity also consumed a portion of my time to configure.
+
+
+With more time I would have went through and refactored the algorithms I wrote. Some are
+in O(n) and a couple others are O(n^2), which I understand is bad. I hope that through this project,
+you are able to see my expertise in OOP concepts and general web-development skills.
+
+
+For the user and account creation, I went with Identity. With Identity, it creates its own
+table structures which can be overriden, though overriding and implementing those functionalities
+would have taken double the time I had. So in the sake of time, this website uses the default
+ASP.NET Identity user settings. With that said, I did configure the lockout settings to lock the
+user out after three unsuccessful attempts.
+
+
+I seperated out the application logic using OOP concepts and standard web MVC practices. In the
+Services folder, the necessary files are present for the project requirements. Models have the
+entities to save and load data and ViewModels for viewing and updating those models back to controllers.
+
+
+A list of things I would have liked to add:
+ * JavaScript to cycle between the questions, instead of having all questions shown at the same time
+ * Finishing the grading system
+ * Displaying the user's last score on the home page
+
+
+
+I hope you would consider me for this opportunity. Working for Veridocs would be an incredible opportunity!
+I look forward to speaking with you soon!
+Andrew Michael

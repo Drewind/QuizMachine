@@ -1,0 +1,26 @@
+﻿<nav class="navbar navbar-light bg-light navbar-expand-lg">
+    <a class="navbar-brand" asp-action="index" asp-controller="home">QUIZ</a>
+
+    <div class="navbar-collapse">
+        <ul class="navbar-nav mx-auto pl-5">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Welcome!</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="quizzes" data-toggle="dropdown" role="button">Quizzes</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">States &amp; Capitals</a>
+                    <a class="dropdown-item" href="#">Countries &amp; Flags </a>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav pr-5">
+            <li class="nav-item">
+                @*<a class="nav-link" href="#">Login</a>*@
+                @Html.Partial("_LoginPartial")
+            </li>
+        </ul>
+    </div>
+</nav>

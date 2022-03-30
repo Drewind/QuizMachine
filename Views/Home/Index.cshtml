@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Landing Page";
+}
+
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<div class="container" style="margin-top: 80px;">
+    <div class="row justify-content-center">
+        <h1 class="display-4"><span class="primary font-weight-bold">Quiz</span> Machine</h1>
+        <h4 class="text-center">
+            The most popular way to entertain yourself for hours on the Internet! More popular than MySpace!
+            <br />
+            Take our quirky quizzes! 90% of people who take these quizzes are <b>SHOCKED</b> about their results!
+            Can you match <a href="#">states and capitals</a>?
+        </h4>
+    </div>
+</div>
+
+<div class="container-fluid mt-5 mb-5">
+    <div class="row">
+        <div class="col-6 bg-light rounded">
+            <h2 class="text-white bg-dark text-center">Featured Quiz</h2>
+            <img class="img-fluid" src="~/images/states-capitals-thumbnail.png" />
+            <a class="btn btn-dark" href="#">Take the Quiz!</a>
+        </div>
+
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <div class="col-6 bg-transparent text-center">
+                <h2>Your Latest Quiz Score</h2>
+                <p>Beat your previous record!</p>
+            </div>
+        }
+        else
+        {
+            <div class="col-6 bg-transparent text-center">
+                <h2>Join the Quiz Takers</h2>
+                <p>Sign up and get quizzes sent to your inbox!</p>
+                <a class="btn btn-primary" asp-action="registerUser" asp-controller="account">Sign Up</a>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="jumbotron-fluid bg-light mt-5">
+    <h2>About Us</h2>
+    <p>You can't really take us seriously right? We make quizzes!</p>
+
+    <div class="row mt-2">
+        <div class="col-6">
+            <h3 class="text-white bg-success text-center" style="height: 40px;">
+                Create Your Own Quizzes
+            </h3>
+            <p>
+                Unlock advance tools to quiz your friends with our unlimited Quiz Machine Machine Machine
+                subscription plan!
+            </p>
+        </div>
+
+        <div class="col-6">
+            <h3 class="text-white bg-warning text-center" style="height: 40px;">
+                Search Thousands of Quizzes
+            </h3>
+            <p>
+                Watch the hours flash before your eyes while you find out if you were
+                a fish or bird in a past life! Spoiler, you were a trash panda!
+            </p>
+        </div>
+    </div>
+</div>

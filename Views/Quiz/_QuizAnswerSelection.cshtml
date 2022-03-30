@@ -1,0 +1,9 @@
+﻿@model QuizMachine.ViewModels.AnswerSelectionViewModel
+
+@for (int i = 0; i < Model.possibleAnswers.Count; i++)
+{
+<div class="custom-control custom-radio" id="V-@Model.questionNumber-@i">
+    <input type="radio" id="@Model.questionNumber-@i" name="custom" class="custom-control-input" />
+    <label class="custom-control-label" for="@Model.questionNumber-@i">@Model.possibleAnswers.ElementAt(i)</label>
+</div>
+}
